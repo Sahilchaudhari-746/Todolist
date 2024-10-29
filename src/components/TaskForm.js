@@ -8,7 +8,7 @@ function TaskForm({ onTaskAdded }) {
         if (!taskName) return;
 
         try {
-            const response = await fetch('http://localhost:5000/tasks/tasks', {
+            const response = await fetch('https://todoserver-alpha.vercel.app/tasks/tasks', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
