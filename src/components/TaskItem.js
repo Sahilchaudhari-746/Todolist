@@ -7,7 +7,7 @@ function TaskItem({ task, onUpdate }) {
     // Function to delete the task
     const handleDelete = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/tasks/tasks/${task.id}`, {
+            const response = await fetch(`https://todoserver-alpha.vercel.app/tasks/tasks/${task.id}`, {
                 method: 'DELETE',
             });
             if(response.ok)
@@ -28,7 +28,7 @@ function TaskItem({ task, onUpdate }) {
     // Function to update the task name
     const handleUpdate = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/tasks/tasks/${task.id}`, {
+            const response = await fetch(`https://todoserver-alpha.vercel.app/tasks/tasks/${task.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ function TaskItem({ task, onUpdate }) {
     // Function to update task status to "Completed"
     const markAsCompleted = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/tasks/tasks/${task.id}`, {
+            const response = await fetch(`https://todoserver-alpha.vercel.app/tasks/tasks/${task.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
