@@ -8,7 +8,7 @@ function TaskList() {
     // Function to fetch tasks from the server
     const fetchTasks = async () => {
         try {
-            const response = await fetch('http://localhost:5000/tasks/tasks');
+            const response = await fetch('https://todoserver-alpha.vercel.app/tasks/tasks');
             const data = await response.json();
             setTasks(data);
         } catch (error) {
